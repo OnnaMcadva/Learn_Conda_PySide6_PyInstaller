@@ -33,7 +33,7 @@ conda deactivate
 ### 2️⃣ Install PyInstaller
 
 ```powershell
-pip install pyinstaller==5.14.0
+pip install pyinstaller==6.17.0
 ```
 
 ---
