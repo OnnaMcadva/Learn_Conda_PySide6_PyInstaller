@@ -1,4 +1,4 @@
-# 🟢 Instrukce: vytvoření `*.exe` pro PySide6 + YOLO + TensorFlow na Windows
+## 🟢 Instrukce: vytvoření `*.exe` pro PySide6 + YOLO + TensorFlow na Windows
 
 Projekt:
 
@@ -12,7 +12,7 @@ project/
 
 ---
 
-## 1️⃣ Příprava Conda-okolí
+### 1️⃣ Příprava Conda-okolí
 
 1. Vytvoř prostředí z `environment.yml`:
 
@@ -34,7 +34,7 @@ python -m pip list
 
 ---
 
-## 2️⃣ Instalace PyInstaller
+### 2️⃣ Instalace PyInstaller
 
 PyInstaller umožňuje zabalit Python-projekt do `*.exe`.
 
@@ -46,7 +46,7 @@ pip install pyinstaller==5.14.0
 
 ---
 
-## 3️⃣ Příprava main.py
+### 3️⃣ Příprava main.py
 
 Ujisti se, že v `main.py` je **správné pořadí a QApplication je vytvořen uvnitř main**:
 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
     main()
 ```
 
-## 4️⃣ Balení PySide6 GUI s backendem do `*.exe`
+### 4️⃣ Balení PySide6 GUI s backendem do `*.exe`
 
 V PowerShellu (z kořenové složky projektu):
 
@@ -81,7 +81,7 @@ Vysvětlení parametrů:
 
 ---
 
-## 5️⃣ Přidání dalších souborů (pokud je potřeba)
+### 5️⃣ Přidání dalších souborů (pokud je potřeba)
 
 1. Pokud máš modely, YAML soubory, obrázky, přidej je přes `--add-data`:
 
@@ -96,7 +96,7 @@ pyinstaller --noconfirm --onefile --windowed main.py --add-data "models;models"
 
 ---
 
-## 6️⃣ Po sestavení
+### 6️⃣ Po sestavení
 
 Po spuštění PyInstalleru se objeví:
 
@@ -116,7 +116,7 @@ Spusť exe:
 
 ---
 
-## 7️⃣ Tipy pro Windows + TensorFlow + PySide6
+### 7️⃣ Tipy pro Windows + TensorFlow + PySide6
 
 1. **Nainstaluj pouze `opencv-python` nebo `opencv-python-headless`**, ne oba současně. Pro GUI je lepší `opencv-python`.
 2. Pro velké projekty TensorFlow + PySide6 je lepší balit `--onefile`, jinak exe bude 200-300 MB.
@@ -131,3 +131,4 @@ A přestav:
 ```powershell
 pyinstaller main.spec
 ```
+
