@@ -1,7 +1,7 @@
 
 ---
 
-## 🟢 Build `*.exe` for PySide6 + YOLO + TensorFlow (Windows)
+## 🟢 Build `*.exe` for PySide6 + Conda + PyInstaller (Windows)
 
 ### Project Structure
 
@@ -92,3 +92,4 @@ pyinstaller main.spec
 * Include any extra `.pyd` or DLLs if needed for TensorFlow/YOLO.
 
 ---
+
